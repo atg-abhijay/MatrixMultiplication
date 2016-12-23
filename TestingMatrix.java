@@ -13,8 +13,8 @@ public class TestingMatrix {
     /* double[] result = Matrix.gcd(-48, 11);
     System.out.println(result[0] + "/" + result[1]); */
 
-    /* double[] fraction = Matrix.turnIntoFraction(9.454545454545425);
-    System.out.println(fraction[0] + "/" + fraction[1]); */
+    double[] fraction = Matrix.turnIntoFraction(-2.75);
+    System.out.println(fraction[0] + "/" + fraction[1]);
 
     /* double[]numbers = {2.4999999999, -0.999999999999, 0.0000000001};
     Matrix.roundingOff(numbers);

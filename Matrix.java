@@ -499,24 +499,27 @@ public class Matrix{
   public static double[] turnIntoFraction(double entry) {
     double tolerance = 0.00001;
     double base = entry; // 2.4522222
-    //double oneUp = entry; // 24.522222
+    //double oneUp = entry * 10; // 24.522222
     double value = 0;
     double difference = 1;
     double closestVal = 0;
-    /* double value = 0;
-    double closestVal = 0;
-    double difference = 0; */
-    //int power = 1;
-    /* double value = oneUp - base; // 22.07000
+    /* int power = 1;
+    double value = oneUp - base; // 22.07000
     double closestVal = (int) Math.round(value); // 22.0
     double difference = Math.abs(closestVal) - Math.abs(value); // 0.7000 */
     /* while(Math.abs(difference) > tolerance) {
       base *= 10;
+      System.out.println("Base: " + base);
       oneUp *= 10;
+      System.out.println("oneUp: " + oneUp);
       power++;
       value = oneUp - base;
+      System.out.println("Value: " + value);
       closestVal = (int) Math.round(value);
+      System.out.println("Closest Value: " + closestVal);
       difference = Math.abs(closestVal) - Math.abs(value);
+      System.out.println("Difference: " + difference);
+      System.out.println("\n");
     } */
     int i = 0;
     int j = 0;
@@ -542,6 +545,7 @@ public class Matrix{
         //System.out.println("\n");
       }
     }
+    //double[] fraction = {closestVal, Math.pow(10, power) - Math.pow(10, power - 1)};
     //double[] fraction = {closestVal, Math.pow(10, j) - Math.pow(10, i)};
     double[] fraction = gcd(closestVal, (int) (Math.pow(10, j) - Math.pow(10, i)));
     return fraction;
