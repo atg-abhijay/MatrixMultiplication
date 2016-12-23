@@ -1,7 +1,7 @@
 public class TestingMatrix {
   public static void main(String[] args) {
     double[][] entries = {{1,3,5,0,0}, {9,9,7,8,2}, {8,6,6,2,1}};
-    Matrix A = new Matrix("A", "3x5", false);
+    Matrix A = new Matrix("A", "4x5", true);
     A.printMatrix();
     System.out.println();
 
@@ -9,12 +9,15 @@ public class TestingMatrix {
     B.printMatrix();
     System.out.println();
 
-    System.out.println(1.0/11);
+    //System.out.println(1.0/11);
     /* double[] result = Matrix.gcd(-48, 11);
     System.out.println(result[0] + "/" + result[1]); */
 
-    double[] fraction = Matrix.turnIntoFraction(-2.75);
+    double[] fraction = Matrix.turnIntoFraction(2.75);
     System.out.println(fraction[0] + "/" + fraction[1]);
+    /* double[] lowestForm = Matrix.gcd(fraction[0], fraction[1]);
+    System.out.println("Lowest form: " + lowestForm[0] + "/" + lowestForm[1]); */
+    System.out.println(1389/8521.0);
 
     /* double[]numbers = {2.4999999999, -0.999999999999, 0.0000000001};
     Matrix.roundingOff(numbers);

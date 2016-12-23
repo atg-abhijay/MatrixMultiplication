@@ -498,7 +498,7 @@ public class Matrix{
   
   public static double[] turnIntoFraction(double entry) {
     double tolerance = 0.00001;
-    double base = entry; // 2.4522222
+    //double base = entry; // 2.4522222
     //double oneUp = entry * 10; // 24.522222
     double value = 0;
     double difference = 1;
@@ -524,10 +524,11 @@ public class Matrix{
     int i = 0;
     int j = 0;
     search:
-    for(i = 0; i < 10; i++) {
+    for(i = 0; i < 25; i++) {
+      double base = entry;
       base *= Math.pow(10, i);
       //System.out.println("Base: " + base);
-      for(j = i + 1; j < 11; j++) {
+      for(j = i + 1; j < 26; j++) {
         double oneUp = entry;
         oneUp *= Math.pow(10, j);
         //System.out.println("oneUp: " + oneUp);
